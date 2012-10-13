@@ -20,6 +20,10 @@
       clone.attr({
         id: 'infinite-size-' + counter
       }).appendTo('body');
+
+      clone.click(function(){
+        $this.click();
+      });
       
       clone.css({
         position: 'absolute',
@@ -30,7 +34,8 @@
         'paddingBottom': options.padding_bottom,
         'paddingRight': options.padding_right,
         'paddingLeft': options.padding_left,
-        zIndex: 999999
+        zIndex: 999999,
+        boxSizing: 'content-box'
       });
     };
 
