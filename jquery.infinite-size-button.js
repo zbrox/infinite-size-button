@@ -29,7 +29,8 @@
         'padding-top': options.padding_top,
         'paddingBottom': options.padding_bottom,
         'paddingRight': options.padding_right,
-        'paddingLeft': options.padding_left
+        'paddingLeft': options.padding_left,
+        zIndex: 999999
       });
     };
 
@@ -43,7 +44,7 @@
     return this.each(function(){
       create();
       position();
-      $(window).resize(position);
+      $(window).resize(position).scroll(position);
     });
   };
 })(jQuery);
